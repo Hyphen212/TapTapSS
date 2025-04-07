@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Audio Player</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: #000000;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            font-size: 48px;
+            padding: 40px 80px;
+            margin-top: 20px;
+            border: none;
+            background-color: #292726;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3f4044;
+        }
+    </style>
+</head>
+<body>
+    <button id="tapButton">Tap</button>
+    <audio id="audio" loop autoplay>
+        <source src="audio010.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+    <script>
+        const audio = document.getElementById("audio");
+        const button = document.getElementById("tapButton");
+        button.addEventListener("click", () => {
+            audio.play();
+        });
+    </script>
+</body>
+</html>
